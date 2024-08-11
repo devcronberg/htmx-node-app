@@ -1,0 +1,18 @@
+<div>
+  <h2>Triangle</h2>
+  <div class="input">
+    <div><span>Height</span><input id="height" type="number" name="height" /></div>
+    <div><span>Base</span><input id="base" type="number" name="base" /></div>
+    <div><span>Area</span><input id="areat" type="number" readonly /></div>
+    <div><button id="calculateTriangle">Calculate</button></div>
+  </div>
+</div>
+
+<script>
+  document.getElementById("calculateTriangle").addEventListener("click", () => {
+    let height = parseFloat(document.getElementById("height").value);
+    let base = parseFloat(document.getElementById("base").value);
+    let area = (height * base) / 2;
+    document.getElementById("areat").value = area;
+  });
+</script>

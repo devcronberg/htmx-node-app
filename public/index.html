@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Area Calculation</title>
+    <script src="https://unpkg.com/htmx.org@1.8.4"></script>
+    <style>
+      .input span {
+        display: inline-block;
+        width: 100px;
+        margin: 10px;
+      }
+      button {
+        margin: 10px;
+      }
+    </style>
+  </head>
+  <body>
+    <h1>Area Calculation</h1>
+    <div>
+      [<a href="#" hx-get="/welcome" hx-target="#content" hx-push-url="/welcome">Home</a>] [<a href="#" hx-get="/square" hx-target="#content" hx-push-url="/square">Square</a>] [<a
+        href="#"
+        hx-get="/triangle"
+        hx-target="#content"
+        hx-push-url="/triangle"
+        >Triangle</a
+      >]
+    </div>
+
+    <div id="content" hx-get="/welcome" hx-trigger="load">
+      <!-- The welcome page will load here initially -->
+    </div>
+  </body>
+</html>
